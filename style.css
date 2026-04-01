@@ -11,6 +11,9 @@ h2{
    font-size: 46px;
    
 }
+h3{
+    font-size: 35px; 
+}
 h4{
     font-size: 20px;
 }
@@ -22,12 +25,20 @@ p{
 font-size: 16px;
 margin: 15px 0 20px 0;
 }
+.font{
+    font-family: Arial, sans-serif; 
+}
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: white;
     padding: 5px 10px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
 
    
 }
@@ -43,7 +54,6 @@ margin: 15px 0 20px 0;
 #navbar li a{
     text-decoration: none;
     color: black;
-    font-family: Arial, sans-serif;
     transition: 0.5s ease;
    
     
@@ -70,7 +80,6 @@ margin: 15px 0 20px 0;
 
 /* hero banner */
 #hero-banner{
-    font-family: Arial, sans-serif;
     background-image: url("images/hero4.png");
     background-repeat: no-repeat;
     height: 90vh;
@@ -81,6 +90,7 @@ margin: 15px 0 20px 0;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    
     
 }
 #hero-banner h1{
@@ -96,13 +106,249 @@ margin: 15px 0 20px 0;
     color: darkgray;
 }
 #hero-banner button{
-    background-image: url("images/button1.jpg");
-    background-color: transparent;
-    color: rgb(245, 248, 250);
-    border: 0;
-    padding: 14px 80px 14px 65px;
+   background-color: White;
+   border:2px solid #e91e63 ;
+   padding: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 10px;
+   color:rgb(239, 22, 22); 
+   box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
+   transition: 0.5s ease;
+}
+#hero-banner button:hover{
+     background-color: rgb(239, 22, 22);
+     color: White;
+     cursor:pointer;
 }
 
+/* Featured Products */
+#Featured h3{
+     text-align: center;
+     margin-bottom: 0px;
+}
+#Featured p{
+     text-align: center;
+     color: darkgray;
+     margin-top: 5px;
+}
+#products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
 
+.product{
+    border: 1px solid #f9f5f6;
+    width: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    
+}
+.product:hover{
+     box-shadow: 0px 8px 20px rgba(239,22,22,0.4);
+     cursor: pointer;
+     transition: 0.5s ease;
+     transform: translateY(-10px);
+}
+.product img{
+   width: 100%;
+   border-radius: 5px;
+   height: 220px;
+   object-fit: cover;
+   background: White;
+   transition: transform 0.4s ease;
 
- 
+}
+.product img:hover{
+    transform: scale(1.05);
+}
+.star{
+    color: gold;
+    margin-top: 0;
+}
+.name{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+#cart{
+    background-color: rgb(249, 249, 249);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    bottom: 5px;
+    right:10px;
+}
+#cart:hover{
+    background-color: rgb(239, 22, 22);
+    cursor:pointer;
+    color: White;
+    transition: 0.5s ease;
+    transform: scale(1.05);
+}
+.price{
+    color: rgb(239, 22, 22);
+}
+/* promo-banner */
+#promo-banner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/banner7.jpg);
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#promo-banner button{
+  
+   background-color: transparent;
+   border:2px solid #e91e63 ;
+   padding: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 10px;
+   color: White;
+   background-color: rgb(239, 22, 22);
+   box-shadow: 0px 5px 15px rgba(0,0,0,0.06);
+   transition: 0.5s ease;
+}
+#promo-banner button:hover{
+     box-shadow: 0px 5px 15px rgba(0,0,0,0.50);
+     transform: scale(1.05);
+     cursor:pointer;
+}
+#promo-banner h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    
+}
+#promo-banner h4{
+    margin-top: 0px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+#Newsletter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    background: linear-gradient(135deg, #f3a4a4, #4f4d4d);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+   
+
+/* TEXT */
+.newstext h4{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.newstext p{
+    color: balck;
+    font-size: 14px;
+}
+
+.newstext span{
+   color: red;
+
+   font-weight: 600;
+
+}
+
+/* FORM */
+.form{
+    display: flex;
+    align-items: center;
+}
+
+/* INPUT */
+#Newsletter input{
+    height: 45px;
+    width: 250px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+}
+
+/* BUTTON */
+#Newsletter button{
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    background-color: rgb(239, 22, 22);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* Footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+footer .col{
+    display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+}
+footer .col a{
+    text-decoration: none;
+    color: black;
+       font-size: 13px;
+    margin-bottom: 10px;
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer .col h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer .col p{
+     font-size: 13px;
+    margin: 0 0 8px 0;
+   
+}
+footer .follow{
+    margin-top: 20px;
+    
+}
+
+footer .follow i {
+    color: #463e3e;
+    padding-right: 4px;
+    cursor: pointer;
+   
+}
+.footer img{
+    width: 150px;   
+}
+.Visa img{
+    width:300px;
+}
